@@ -15,6 +15,28 @@ Explore Products
         </div>
         <div><img src={banner} alt="" /> </div>
       </div>
+      <div className='bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white flex justify-around mx-auto text-center px-6 mt-10 p-2'>
+       
+        <div>
+          <p className='font-bold text-[30px] md:text-[60px]'>50K+</p>
+           <p className='text-[18px] md:text-[24px] font-medium text-gray-200'>Active Users</p>
+        </div>
+
+          <div className="w-px h-20 bg-gray-300 mx-6 mt-4  mb-4 "></div>
+
+        <div>
+          <p className='font-bold text-[30px] md:text-[60px]'>200+</p>
+           <p className='text-[18px] md:text-[24px] font-medium text-gray-200'>Premium Tools</p>
+        </div>
+
+          <div className="w-px h-20 bg-gray-300 mx-6 mt-4 mb-4"></div>
+
+        <div>
+          <p className='font-bold text-[30px] md:text-[60px]'>4.9</p>
+           <p className='text-[18px] md:text-[24px] font-medium text-gray-200'>Rating</p>
+        </div>
+
+        </div>
         </div>
     );
 };

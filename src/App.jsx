@@ -1,6 +1,7 @@
 import './App.css'
 import HeroSection from './firstPart/heroSection'
 import Navbar from './navbar/Navbar'
+import Tools from './toolsSection/Tools'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
 <Navbar></Navbar>   
 <HeroSection></HeroSection>
+<Tools></Tools>
 </>
   )
 }
