@@ -4,6 +4,9 @@ import Navbar from './navbar/Navbar'
 import Cards from './cards/Cards'
 import Tools from './toolsSection/Tools'
 import { Suspense } from 'react'
+import GetStarted from './getStarted/GetStarted'
+import Pricing from './pricing/Pricing'
+import Footer from './footer/Footer'
 
 
 const fetchCard = async()=> {
@@ -25,6 +28,9 @@ function App() {
 }>
   <Cards cardPromise={cardPromise}></Cards>
 </Suspense>
+<GetStarted></GetStarted>
+<Pricing></Pricing>
+<Footer></Footer>
 
 </>
   )

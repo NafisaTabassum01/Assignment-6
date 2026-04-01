@@ -8,7 +8,7 @@ import socialMedia from '../assets/products/social-media.png';
 
 
 
-const AllCards = ({cards}) => {
+const AllCards = ({cards,selectedCards,setSelectedCards}) => {
    
    console.log(cards, "cards")
    const iconMap = {
@@ -20,7 +20,7 @@ const AllCards = ({cards}) => {
   socialMedia: socialMedia,
 };
     return (
-        <div className='grid grid-cols-1 gap-5 md:grid-cols-3 gap-5 w-10/12 mx-auto mt-6'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-5 w-10/12 mx-auto mt-6'>
 
 {
     cards.map(card => {
@@ -65,17 +65,13 @@ const AllCards = ({cards}) => {
   }
 </ul>
     <div className="mt-6">
-      <button className="btn btn-primary btn-block rounded-4xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white">Buy Now</button>
+      <button   onClick={() => setSelectedCards([...selectedCards, card])}
+ 
+      className="btn btn-primary btn-block rounded-4xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white">Buy Now</button>
     </div>
   </div>
 </div>
-    })
-}
-
-
-
-
-
+    })}
         </div>
     );
 };
