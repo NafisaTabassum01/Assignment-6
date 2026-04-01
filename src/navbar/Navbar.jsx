@@ -1,9 +1,11 @@
 import React from 'react';
+import cart from '../assets/products/shopping-cart.png';
+
 
 const Navbar = () => {
     return (
         <div>
-            <div className="navbar bg-base-100 w-10/12 mx-auto border-none">
+            <div className="navbar bg-base-100 w-11/12 mx-auto border-none md:w-10/12">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -20,7 +22,7 @@ const Navbar = () => {
         <li><a>FAQ</a></li>
       </ul>
     </div>
-    <p className="text-2xl md:text-4xl font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] p-2 bg-clip-text text-transparent">DigiTools</p>
+    <p className="text-2xl font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] p-2 bg-clip-text text-transparent md:text-4xl ">DigiTools</p>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -40,7 +42,9 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-3xl">Get Started</a>
+<img src={cart} alt="" className=''/>
+<button className='font-semibold text-[16px] border-none bg-white btn shadow-none'>Login</button>
+    <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-3xl">Get Started</button>
   </div>
 </div>
 <hr className='border border-gray-200' />
