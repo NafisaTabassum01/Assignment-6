@@ -38,7 +38,7 @@ const AllCards = ({cards,selectedCards,setSelectedCards}) => {
       <h2 className="text-[24px] font-bold">{card.name}</h2>
       <p className='text-[16px] text-[#627382]'>{card.description}</p>
 
-      <span className="text-[24px]">${card.price}/<span className='text-[16px] text-[#627382]'>mo</span></span>
+      <span className="text-[24px]">${card.price}/<span className='text-[16px] text-[#627382]'>{card.period}</span></span>
     </div>
     <ul className="mt-6 flex flex-col gap-2 text-[16px] text-[#627382] ">
   {

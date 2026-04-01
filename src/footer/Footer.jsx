@@ -83,9 +83,20 @@ const Footer = () => {
       </a>
     </div>
   </nav>
-</footer>
 
-            </div>
+</footer>
+<hr className='w-10/12 mx-auto border-t border-gray-700 py-4'/>
+
+<div className="w-10/12 mx-auto text-[16px] text-gray-500 pb-5 flex flex-col md:flex-row md:justify-between md:items-center gap-3">
+  <div>© 2026 DigiTools. All rights reserved.</div>
+
+  {/* Links */}
+  <div className="flex flex-col md:flex-row gap-3 md:gap-6">
+    <p>Privacy Policy</p>
+    <p>Terms of Service</p>
+    <p>Cookies</p>
+  </div>
+</div>            </div>
         </div>
     );
 };

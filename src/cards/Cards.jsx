@@ -13,11 +13,15 @@ const Cards = ({cardPromise}) => {
    const [selectedType , setSelectedType] = useState("available") 
    const [selectedCards , setSelectedCards] = useState([]);
 
-   const handleRemoveCard = (id) => {
-  const updatedCards = selectedCards.filter(
-    card => card.id !== id
-  );
+   const handleRemoveCard = (indexToRemove) => {
+  const updatedCards = selectedCards.filter(function(card, index) {
+    return index !== indexToRemove;
+  });
+
   setSelectedCards(updatedCards);
+};
+const handleClearCart = () => {
+  setSelectedCards([]);  // Shob selected card remove korbe
 };
 
     return (
@@ -51,7 +55,7 @@ const Cards = ({cardPromise}) => {
       setSelectedCards={setSelectedCards}
     />
   ) : (
-    <SelectedCards selectedCards={selectedCards} handleRemoveCard={handleRemoveCard} />
+    <SelectedCards selectedCards={selectedCards} handleRemoveCard={handleRemoveCard}   handleClearCart={handleClearCart} />
   )
 }
         </div>

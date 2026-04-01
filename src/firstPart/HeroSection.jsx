@@ -1,10 +1,16 @@
 import React from 'react';
 import banner from '../assets/banner.png';
+import ball from '../assets/round.png';
 const HeroSection = () => {
     return (
         <div>
-      <div className='flex flex-col w-10/12 mx-auto mt-15 justify-around md:flex-row gap-8'>
-        <div><p className='font-bold text-6xl'>Supercharge Your <br /> Digital Workflow</p>
+          <div className='flex flex-col w-10/12 mx-auto mt-15 justify-around md:flex-row gap-8'>
+        <div>
+          <div className='bg-[#E1E7FF] text-[16px] text-purple-500 flex gap-3 px-2 py-1 rounded-4xl w-10/12 md:w-6/12'>
+            <img src={ball} alt=""/>
+            <p>New: AI-Powered Tools Available</p></div>
+      
+          <p className='font-bold text-6xl'>Supercharge Your <br /> Digital Workflow</p>
         <p className='text-gray-500 text-[18px] mt-5 mb-5'>Access premium AI tools, design assets, templates, and productivity <br />
 software—all in one place. Start creating faster today. <br />
 

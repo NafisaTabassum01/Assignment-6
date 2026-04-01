@@ -7,7 +7,7 @@ import portfolio from '../assets/products/portfolio.png';
 import socialMedia from '../assets/products/social-media.png';
 
 
-const SelectedCards = ({selectedCards , handleRemoveCard} ) => {
+const SelectedCards = ({selectedCards , handleRemoveCard , handleClearCart} ) => {
    
 const totalPrice = selectedCards.reduce(
   (total, card) => total + card.price,
@@ -38,21 +38,26 @@ const totalPrice = selectedCards.reduce(
       {
         selectedCards.length === 0 ? (
           <p className="text-gray-400">
-            No products added to cart.
+            Your cart is empty.
           </p>
         ) : (
-          selectedCards.map(card => (
-            <div>
-                <div key={card.id} className="border border-gray-300 p-4 rounded-xl mb-3 flex justify-between ">
+          selectedCards.map((card,index) => (
+            <div key={index} className="border border-gray-300 p-4 rounded-xl mb-3">
+                <div className='flex justify-between'>
+              <div className='flex gap-5'>
+                <img src={iconMap[card.icon]} 
+                    alt={card.name} 
+                    className='h-8' />
               <div>
-                <img src={iconMap[card.icon]} alt={card.name} className='h-8' />
-              <div><h3 className="font-semibold">{card.name}</h3>
+              <h3 className="font-semibold">{card.name}</h3>
               <p>${card.price}</p>
-              </div>          
-                </div>
-                <button   onClick={() => handleRemoveCard(card.id)}
+              </div>
 
-                className='btn border-none text-red-500 bg-white shadow-none'> Remove</button></div>
+                </div>
+                <button onClick={() => handleRemoveCard(index)}
+
+                className='btn border-none text-red-500 bg-white shadow-none'> Remove</button>
+                </div>
                 </div>
   
           )
@@ -61,7 +66,9 @@ const totalPrice = selectedCards.reduce(
                     <p className='text-gray-400'>Total : </p>
                     <p className="font-bold text-xl">${totalPrice}</p>
                 </div>
-                <button className='btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white w-full rounded-4xl mb-4'>Proceed to Checkout</button>
+                <button   onClick={handleClearCart}
+
+                 className='btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white w-full rounded-4xl mb-4'>Proceed to Checkout</button>
             
 
     </div>

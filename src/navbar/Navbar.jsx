@@ -13,7 +13,7 @@ const Navbar = () => {
       </div>
       <ul
         tabIndex="-1"
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 p-2 shadow">
         
         <li><a>products</a></li>
         <li><a>Features</a></li>
@@ -22,7 +22,7 @@ const Navbar = () => {
         <li><a>FAQ</a></li>
       </ul>
     </div>
-    <p className="text-2xl font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] p-2 bg-clip-text text-transparent md:text-4xl ">DigiTools</p>
+    <p className="text-xl font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] p-2 bg-clip-text text-transparent md:text-4xl ">DigiTools</p>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -42,7 +42,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-<img src={cart} alt="" className=''/>
+<img src={cart} alt="" className='hidden md:block'/>
 <button className='font-semibold text-[16px] border-none bg-white btn shadow-none'>Login</button>
     <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-3xl">Get Started</button>
   </div>
