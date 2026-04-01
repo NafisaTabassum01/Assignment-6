@@ -16,6 +16,8 @@ const Cards = ({cardPromise}) => {
    const [selectedCards , setSelectedCards] = useState([]);
 
    const handleRemoveCard = (indexToRemove) => {
+        const removedCard = selectedCards[indexToRemove];
+
   const updatedCards = selectedCards.filter(function(card, index) {
     return index !== indexToRemove;
   });
@@ -60,7 +62,10 @@ const handleClearCart = () => {
       setSelectedCards={setSelectedCards}
     />
   ) : (
-    <SelectedCards selectedCards={selectedCards} handleRemoveCard={handleRemoveCard}   handleClearCart={handleClearCart} />
+    <SelectedCards 
+    selectedCards={selectedCards} 
+    handleRemoveCard={handleRemoveCard}   
+    handleClearCart={handleClearCart} />
   )
 }
         </div>

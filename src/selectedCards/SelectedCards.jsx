@@ -58,7 +58,6 @@ const totalPrice = selectedCards.reduce(
                 </div>
                 <button onClick={() => {
                   handleRemoveCard(index);
-                  toast.success(`${card.name} removed from your cart!`);
                 }}
 
                 className='btn border-none text-red-500 bg-white shadow-none'> Remove</button>
