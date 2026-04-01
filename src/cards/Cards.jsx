@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { use } from "react";
 import AllCards from '../allCards/AllCards';
 import SelectedCards from '../selectedCards/SelectedCards';
+import { toast } from 'react-toastify';
+
 
 
 const Cards = ({cardPromise}) => {
@@ -19,9 +21,12 @@ const Cards = ({cardPromise}) => {
   });
 
   setSelectedCards(updatedCards);
+  toast.info(`${removedCard.name} removed from cart.`);
+
 };
 const handleClearCart = () => {
-  setSelectedCards([]);  // Shob selected card remove korbe
+  setSelectedCards([]);  
+  toast.success("Checkout complete! Cart cleared!");
 };
 
     return (

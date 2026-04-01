@@ -5,6 +5,7 @@ import designTool from '../assets/products/design-tool.png';
 import operation from '../assets/products/operation.png';
 import portfolio from '../assets/products/portfolio.png';
 import socialMedia from '../assets/products/social-media.png';
+import { toast } from 'react-toastify';
 
 
 const SelectedCards = ({selectedCards , handleRemoveCard , handleClearCart} ) => {
@@ -23,6 +24,7 @@ const totalPrice = selectedCards.reduce(
      portfolio: portfolio,
      socialMedia: socialMedia,
    };
+   
 
    return (
         <div>
@@ -54,7 +56,10 @@ const totalPrice = selectedCards.reduce(
               </div>
 
                 </div>
-                <button onClick={() => handleRemoveCard(index)}
+                <button onClick={() => {
+                  handleRemoveCard(index);
+                  toast.success(`${card.name} removed from your cart!`);
+                }}
 
                 className='btn border-none text-red-500 bg-white shadow-none'> Remove</button>
                 </div>
@@ -67,8 +72,7 @@ const totalPrice = selectedCards.reduce(
                     <p className="font-bold text-xl">${totalPrice}</p>
                 </div>
                 <button   onClick={handleClearCart}
-
-                 className='btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white w-full rounded-4xl mb-4'>Proceed to Checkout</button>
+                className='btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white w-full rounded-4xl mb-4'>Proceed to Checkout</button>
             
 
     </div>

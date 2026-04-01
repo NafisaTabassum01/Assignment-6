@@ -5,6 +5,7 @@ import designTool from '../assets/products/design-tool.png';
 import operation from '../assets/products/operation.png';
 import portfolio from '../assets/products/portfolio.png';
 import socialMedia from '../assets/products/social-media.png';
+import { toast } from 'react-toastify';
 
 
 
@@ -65,7 +66,12 @@ const AllCards = ({cards,selectedCards,setSelectedCards}) => {
   }
 </ul>
     <div className="mt-6">
-      <button   onClick={() => setSelectedCards([...selectedCards, card])}
+      <button   onClick={() => {
+        setSelectedCards([...selectedCards, card])
+        toast.success(`${card.name} added to cart!`);
+      } 
+
+      }
  
       className="btn btn-primary btn-block rounded-4xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white">Buy Now</button>
     </div>

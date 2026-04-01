@@ -7,7 +7,8 @@ import { Suspense } from 'react'
 import GetStarted from './getStarted/GetStarted'
 import Pricing from './pricing/Pricing'
 import Footer from './footer/Footer'
-
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const fetchCard = async()=> {
   const res = await fetch("/data.json")
@@ -16,6 +17,7 @@ const fetchCard = async()=> {
 
 function App() {
 
+  const notify = () => toast("Wow so easy!");
   const cardPromise= fetchCard();
 
   return (
@@ -31,6 +33,22 @@ function App() {
 <GetStarted></GetStarted>
 <Pricing></Pricing>
 <Footer></Footer>
+
+        <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+transition={Bounce}
+/>
+
+
 
 </>
   )
