@@ -1,16 +1,117 @@
-# React + Vite
+# 🚀 DigiTools – Digital Tools Buying Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Description
 
-Currently, two official plugins are available:
+**DigiTools** is a modern digital marketplace where users can explore and purchase premium AI tools, design assets, templates, and productivity software in one place. It is built to supercharge your digital workflow and help creators, developers, and designers work faster and smarter.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧰 Technology Used
+- React.js
+- Tailwind CSS + DaisyUI
+- JavaScript (ES6+)
+- React Toastify (for notifications)
+- JSON (for product data management)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Key Features
+
+### 🧭 Navbar
+- Fully responsive navbar designed from Figma
+- Cart icon with dynamic product count
+- Clean and modern UI
+
+### 🎯 Banner Section
+- Heading, description, image, and CTA buttons
+- Eye-catching design for user engagement
+
+### 📊 Stats Section
+- Displays key platform statistics in Figma-based layout
+
+### 🔄 Product & Cart Toggle System
+- Two central buttons: **Products** & **Cart**
+- Default view: Products section
+- Cart view shows selected items or empty state message
+
+### 📦 Product System (JSON Data)
+Each product contains:
+- id
+- name
+- description
+- price
+- period (one-time / monthly / yearly)
+- tag (popular / new / best seller)
+- tagType
+- features (array)
+- icon
+
+### 🃏 Product Cards
+- 3-column responsive grid layout
+- Each card includes:
+  - Name
+  - Description
+  - Price & period
+  - Tag badge
+  - Feature list
+  - Icon
+  - Buy Now button
+
+### 🛒 Cart Functionality
+- Add/remove products dynamically
+- Cart displays:
+  - Product name
+  - Icon
+  - Price
+  - Remove button
+- Cart total count shown in navbar
+- “Proceed to Checkout” button:
+  - Clears all cart items
+
+### 🪜 Steps Section
+- Step-by-step guide section designed from Figma
+
+### 💰 Pricing Section
+- Attractive pricing cards based on Figma design
+
+### 🦶 Footer
+- Fully responsive footer with structured layout
+
+---
+
+## 🚨 Extra Challenge Features
+
+### 🔔 React Toastify Integration
+- Shows alerts for:
+  - Add to cart
+  - Remove item
+  - Checkout success
+
+### ❌ Remove Functionality
+- Each cart item can be removed individually
+
+### 🧮 Cart Total System
+- Displays total selected products dynamically
+
+### ⚡ Bonus UX Features
+- Cart count updates in real-time
+- Buy Now button shows “Added to cart” feedback (optional enhancement)
+- Smooth and responsive UI interactions
+
+---
+
+## 📱 Responsive Design
+- Mobile, tablet, and desktop optimized
+- Follows modern responsive UI standards
+
+
+---
+
+## 🎯 Project Goal
+DigiTools aims to provide a seamless digital marketplace experience where users can quickly discover and purchase essential digital tools, improving productivity and creativity in one unified platform.
+
+---
+
+## 💡 Author
+Created by Nafisa using React & Tailwind CSS
